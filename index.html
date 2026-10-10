@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080909">
+  <meta name="description" content="CIMAX. Ropa técnica deportiva. Disciplina, constancia y superación. Próximamente.">
+  <title>CIMAX — Próximamente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #080909;
+      color: #F5F5F3;
+      font-family: Inter, Arial, sans-serif;
+    }
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 78% 38%, #343b3b 0%, transparent 48%),
+        linear-gradient(130deg, #080909 10%, #171d1e 60%, #080909);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, rgba(8,9,9,.65), transparent 90%);
+    }
+    header, .content, .bottom { position: relative; z-index: 1; }
+    header {
+      padding: 30px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-weight: 900;
+      font-size: 40px;
+      letter-spacing: -1px;
+      font-style: italic;
+      line-height: 1;
+    }
+    .logo span { color: #FF3020; }
+    .header-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      color: #c3c6c6;
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 7% 100px;
+      max-width: 1200px;
+    }
+    .eyebrow {
+      color: #FF3020;
+      font-weight: 700;
+      letter-spacing: 5px;
+      font-size: 12px;
+      margin-bottom: 25px;
+    }
+    h1, h2 {
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    h1 {
+      font-size: clamp(76px, 12vw, 190px);
+      line-height: .82;
+      letter-spacing: -3px;
+    }
+    h1 .accent { color: #FF3020; }
+    .subhead {
+      margin-top: 35px;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: clamp(24px, 3.5vw, 45px);
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .description {
+      max-width: 520px;
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 1.9;
+      color: #b5baba;
+    }
+    .launch {
+      margin-top: 42px;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 3px;
+    }
+    .launch::before {
+      content: "";
+      width: 36px;
+      height: 3px;
+      background: #FF3020;
+    }
+    .bottom {
+      padding: 25px 7%;
+      border-top: 1px solid #ffffff20;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #a2a7a7;
+    }
+    .philosophy {
+      padding: 110px 7%;
+      max-width: 1150px;
+      margin: auto;
+    }
+    .section-label {
+      color: #FF3020;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: clamp(50px, 7vw, 105px);
+      line-height: .94;
+    }
+    .philosophy p {
+      max-width: 720px;
+      color: #b5baba;
+      line-height: 1.9;
+      margin-top: 30px;
+    }
+    .quote {
+      margin-top: 55px;
+      padding-left: 24px;
+      border-left: 4px solid #FF3020;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-weight: 700;
+      font-size: clamp(25px, 4vw, 45px);
+      text-transform: uppercase;
+    }
+    .coming {
+      text-align: center;
+      background: #FF3020;
+      color: #080909;
+      padding: 80px 7%;
+    }
+    .coming h2 { font-size: clamp(65px, 10vw, 145px); }
+    .coming p { font-size: 14px; font-weight: 600; letter-spacing: 2px; }
+    footer {
+      padding: 30px 7%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      color: #999;
+      font-size: 11px;
+    }
+    @media (max-width: 600px) {
+      header { padding-top: 24px; }
+      .logo { font-size: 33px; }
+      .header-label { font-size: 8px; letter-spacing: 1px; }
+      .content { padding-top: 65px; padding-bottom: 70px; }
+      h1 { letter-spacing: -1px; }
+      .bottom { flex-direction: column; }
+      .philosophy { padding-top: 75px; padding-bottom: 75px; }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <header>
+      <div class="logo" aria-label="CIMAX">CIM<span>AX</span></div>
+      <div class="header-label">BUILT FOR THE HARD WAY</div>
+    </header>
+
+    <main class="content">
+      <div class="eyebrow">DISCIPLINA · CONSTANCIA · SUPERACIÓN</div>
+      <h1>NO ES<br>PARA <span class="accent">TODOS.</span></h1>
+      <div class="subhead">LO DIFÍCIL ES EL CAMINO.</div>
+      <p class="description">
+        Estamos preparando algo para quienes nunca dejan de superarse.
+        Una nueva forma de vivir el deporte está en camino.
+      </p>
+      <div class="launch">PRÓXIMAMENTE</div>
+    </main>
+
+    <div class="bottom">
+      <span>CIMAX — PERFORMANCE APPAREL</span>
+      <span>RUNNING / TRAINING / CYCLING</span>
+    </div>
+  </section>
+
+  <section class="philosophy">
+    <div class="section-label">01 / NUESTRA FILOSOFÍA</div>
+    <h2>LA ACTITUD<br>MARCA LA <span style="color:#FF3020">DIFERENCIA.</span></h2>
+    <p>
+      CIMAX nace de una mentalidad: la constancia, la disciplina y la
+      superación personal. Creemos en quienes siguen adelante cuando
+      el camino se vuelve difícil. No importa de dónde vienes ni cuál
+      sea tu nivel. Importa hasta dónde estás dispuesto a llegar.
+    </p>
+    <div class="quote">
+      SOLO LOS CAMINOS DIFÍCILES<br>LOS RECORREN LOS DUROS.
+    </div>
+  </section>
+
+  <section class="coming">
+    <h2>PRÓXIMAMENTE.</h2>
+    <p>ROPA TÉCNICA PARA RUNNING, GIMNASIO Y CICLISMO</p>
+  </section>
+
+  <footer>
+    <span>© CIMAX 2026</span>
+    <span>LA DISCIPLINA NO NEGOCIA.</span>
+  </footer>
+</body>
+</html>
